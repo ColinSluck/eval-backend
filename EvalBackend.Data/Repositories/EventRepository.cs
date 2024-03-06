@@ -28,4 +28,11 @@ public class EventRepository
         _context.Update(updatedEvent);
         _context.SaveChanges();
     }
+    
+    public void DeleteEvent(Guid eventId)
+    {
+        var entity = _context.Event.FirstOrDefault(e => e.Id == eventId);
+        _context.Event.Remove(entity);
+        _context.SaveChanges();
+    }
 }

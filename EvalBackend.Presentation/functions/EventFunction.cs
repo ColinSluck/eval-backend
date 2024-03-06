@@ -32,6 +32,13 @@ public class EventFunction
         return req.CreateResponse(HttpStatusCode.OK);
     }
     
+    [Function("DeleteEvent")]
+    public async Task<HttpResponseData> DeleteEvent([HttpTrigger(AuthorizationLevel.Anonymous, "delete", Route = "events/{eventId:guid}")] HttpRequestData req, Guid eventId)
+    {
+        _eventRepository.DeleteEvent(eventId);
+        return req.CreateResponse(HttpStatusCode.OK);
+    }
+    
     [Function("GetEvents")]
     public async Task<HttpResponseData> GetEvents([HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = "events")] HttpRequestData req)
     {
@@ -45,6 +52,8 @@ public class EventFunction
         
         return httpResponseData;
     }
+    
+    
     
     
 }
