@@ -24,6 +24,14 @@ public class EventFunction
         return req.CreateResponse(HttpStatusCode.Created);
     }
     
+    [Function("UpdateEvent")]
+    public async Task<HttpResponseData> UpdateEvent([HttpTrigger(AuthorizationLevel.Anonymous, "put", Route = "events/{eventId:guid}")] HttpRequestData req, Guid eventId)
+    {
+        var entity = await req.ReadFromJsonAsync<Event>();
+        _eventRepository.UpdateEvent(eventId, entity);
+        return req.CreateResponse(HttpStatusCode.OK);
+    }
+    
     [Function("GetEvents")]
     public async Task<HttpResponseData> GetEvents([HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = "events")] HttpRequestData req)
     {
@@ -37,4 +45,6 @@ public class EventFunction
         
         return httpResponseData;
     }
+    
+    
 }

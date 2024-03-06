@@ -21,4 +21,11 @@ public class EventRepository
     {
         return await _context.Event.ToListAsync();
     }
+    
+    public void UpdateEvent(Guid eventId, Event updatedEvent)
+    {
+        updatedEvent.Id = eventId;
+        _context.Update(updatedEvent);
+        _context.SaveChanges();
+    }
 }
