@@ -4,6 +4,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EvalBackend.Presentation", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EvalBackend.Business", "EvalBackend.Business\EvalBackend.Business.csproj", "{4F350BDE-5AD4-423D-A43D-7531147C1B9D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EvalBackend.Data", "EvalBackend.Data\EvalBackend.Data.csproj", "{ED9E1734-4B5F-4D6D-A76A-25DD8C0475CC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{4F350BDE-5AD4-423D-A43D-7531147C1B9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4F350BDE-5AD4-423D-A43D-7531147C1B9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4F350BDE-5AD4-423D-A43D-7531147C1B9D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED9E1734-4B5F-4D6D-A76A-25DD8C0475CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED9E1734-4B5F-4D6D-A76A-25DD8C0475CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED9E1734-4B5F-4D6D-A76A-25DD8C0475CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED9E1734-4B5F-4D6D-A76A-25DD8C0475CC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
