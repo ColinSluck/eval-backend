@@ -1,4 +1,5 @@
 using EvalBackend.Domain.models;
+using Microsoft.EntityFrameworkCore;
 
 namespace EvalBackend.Data.Repositories;
 
@@ -14,5 +15,10 @@ public class EventRepository
     {
         _context.Event.Add(newEvent);
         _context.SaveChanges();
+    }
+    
+    public async Task<IEnumerable<Event>> GetEvents()
+    {
+        return await _context.Event.ToListAsync();
     }
 }
